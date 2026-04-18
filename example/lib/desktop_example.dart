@@ -85,22 +85,22 @@ class SidebarXExampleApp extends StatelessWidget {
               items: [
                 SidebarXItem(
                   icon: Icons.home,
-                  label: 'Home',
+                  label: const Text('Home'),
                   onTap: () {
                     debugPrint('Hello');
                   },
                 ),
                 const SidebarXItem(
                   icon: Icons.search,
-                  label: 'Search',
+                  label: const Text('Search'),
                 ),
                 const SidebarXItem(
                   icon: Icons.people,
-                  label: 'People',
+                  label: const Text('People'),
                 ),
                 const SidebarXItem(
                   icon: Icons.favorite,
-                  label: 'Favorites',
+                  label: const Text('Favorites'),
                 ),
               ],
             ),

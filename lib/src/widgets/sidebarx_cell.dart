@@ -53,14 +53,10 @@ class _SidebarXCellState extends State<SidebarXCell> {
         : _hovered
             ? theme.hoverTextStyle
             : theme.textStyle;
-    final decoration =
-        (widget.selected ? theme.selectedItemDecoration : theme.itemDecoration);
-    final margin =
-        (widget.selected ? theme.selectedItemMargin : theme.itemMargin);
-    final padding =
-        (widget.selected ? theme.selectedItemPadding : theme.itemPadding);
-    final textPadding =
-        widget.selected ? theme.selectedItemTextPadding : theme.itemTextPadding;
+    final decoration = (widget.selected ? theme.selectedItemDecoration : theme.itemDecoration);
+    final margin = (widget.selected ? theme.selectedItemMargin : theme.itemMargin);
+    final padding = (widget.selected ? theme.selectedItemPadding : theme.itemPadding);
+    final textPadding = widget.selected ? theme.selectedItemTextPadding : theme.itemTextPadding;
 
     return MouseRegion(
       onEnter: (_) => _onEnteredCellZone(),
@@ -78,9 +74,7 @@ class _SidebarXCellState extends State<SidebarXCell> {
           padding: padding ?? const EdgeInsets.all(8),
           margin: margin ?? const EdgeInsets.all(4),
           child: Row(
-            mainAxisAlignment: widget.extended
-                ? MainAxisAlignment.start
-                : MainAxisAlignment.center,
+            mainAxisAlignment: widget.extended ? MainAxisAlignment.start : MainAxisAlignment.center,
             children: [
               AnimatedBuilder(
                 animation: _animation,
@@ -104,15 +98,7 @@ class _SidebarXCellState extends State<SidebarXCell> {
                 flex: 6,
                 child: FadeTransition(
                   opacity: _animation,
-                  child: Padding(
-                    padding: textPadding ?? EdgeInsets.zero,
-                    child: Text(
-                      widget.item.label ?? '',
-                      style: textStyle,
-                      overflow: TextOverflow.fade,
-                      maxLines: 1,
-                    ),
-                  ),
+                  child: Padding(padding: textPadding ?? EdgeInsets.zero, child: widget.item.label),
                 ),
               ),
             ],

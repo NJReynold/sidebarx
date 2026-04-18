@@ -143,28 +143,28 @@ class ExampleSidebarX extends StatelessWidget {
       items: [
         SidebarXItem(
           icon: Icons.home,
-          label: 'Home',
+          label: const Text('Home'),
           onTap: () {
             debugPrint('Home');
           },
         ),
         const SidebarXItem(
           icon: Icons.search,
-          label: 'Search',
+          label: const Text('Search'),
         ),
         const SidebarXItem(
           icon: Icons.people,
-          label: 'People',
+          label: const Text('People'),
         ),
         SidebarXItem(
           icon: Icons.favorite,
-          label: 'Favorites',
+          label: const Text('Favorites'),
           selectable: false,
           onTap: () => _showDisabledAlert(context),
         ),
         const SidebarXItem(
           iconWidget: FlutterLogo(size: 20),
-          label: 'Flutter',
+          label: const Text('Flutter'),
         ),
       ],
     );

@@ -20,7 +20,7 @@ class SidebarXItem {
           'You can create SidebarXItem with IconData? icon or with Widget? iconWidget',
         );
 
-  final String? label;
+  final Widget? label;
   final IconData? icon;
   @Deprecated('Use iconBuilder instead')
   final Widget? iconWidget;
