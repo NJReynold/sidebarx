@@ -88,7 +88,7 @@ class ExampleSidebarX extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         hoverColor: scaffoldBackgroundColor,
-        textStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+        textStyle: TextStyle(color: Colors.white.withValues(alpha: (0.7))),
         selectedTextStyle: const TextStyle(color: Colors.white),
         hoverTextStyle: const TextStyle(
           color: Colors.white,
@@ -103,20 +103,20 @@ class ExampleSidebarX extends StatelessWidget {
         selectedItemDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: actionColor.withOpacity(0.37),
+            color: actionColor.withValues(alpha: (0.37)),
           ),
           gradient: const LinearGradient(
             colors: [accentCanvasColor, canvasColor],
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.28),
+              color: Colors.black.withValues(alpha: (0.28)),
               blurRadius: 30,
             )
           ],
         ),
         iconTheme: IconThemeData(
-          color: Colors.white.withOpacity(0.7),
+          color: Colors.white.withValues(alpha: (0.7)),
           size: 20,
         ),
         selectedIconTheme: const IconThemeData(
@@ -150,11 +150,11 @@ class ExampleSidebarX extends StatelessWidget {
         ),
         const SidebarXItem(
           icon: Icons.search,
-          label: const Text('Search'),
+          label: Text('Search'),
         ),
         const SidebarXItem(
           icon: Icons.people,
-          label: const Text('People'),
+          label: Text('People'),
         ),
         SidebarXItem(
           icon: Icons.favorite,
@@ -164,7 +164,7 @@ class ExampleSidebarX extends StatelessWidget {
         ),
         const SidebarXItem(
           iconWidget: FlutterLogo(size: 20),
-          label: const Text('Flutter'),
+          label: Text('Flutter'),
         ),
       ],
     );
@@ -250,5 +250,5 @@ const canvasColor = Color(0xFF2E2E48);
 const scaffoldBackgroundColor = Color(0xFF464667);
 const accentCanvasColor = Color(0xFF3E3E61);
 const white = Colors.white;
-final actionColor = const Color(0xFF5F5FA7).withOpacity(0.6);
-final divider = Divider(color: white.withOpacity(0.3), height: 1);
+final actionColor = const Color(0xFF5F5FA7).withValues(alpha: (0.6));
+final divider = Divider(color: white.withValues(alpha: (0.3)), height: 1);

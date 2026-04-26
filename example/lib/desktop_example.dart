@@ -48,14 +48,14 @@ class SidebarXExampleApp extends StatelessWidget {
                 selectedItemDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: actionColor.withOpacity(0.37),
+                    color: actionColor.withValues(alpha: (0.37)),
                   ),
                   gradient: const LinearGradient(
                     colors: [accentCanvasColor, canvasColor],
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.28),
+                      color: Colors.black.withValues(alpha: (0.28)),
                       blurRadius: 30,
                     )
                   ],
@@ -92,15 +92,15 @@ class SidebarXExampleApp extends StatelessWidget {
                 ),
                 const SidebarXItem(
                   icon: Icons.search,
-                  label: const Text('Search'),
+                  label: Text('Search'),
                 ),
                 const SidebarXItem(
                   icon: Icons.people,
-                  label: const Text('People'),
+                  label: Text('People'),
                 ),
                 const SidebarXItem(
                   icon: Icons.favorite,
-                  label: const Text('Favorites'),
+                  label: Text('Favorites'),
                 ),
               ],
             ),
@@ -186,6 +186,6 @@ const canvasColor = Color(0xFF2E2E48);
 const scaffoldBackgroundColor = Color(0xFF464667);
 const accentCanvasColor = Color(0xFF3E3E61);
 const white = Colors.white;
-final actionColor = const Color(0xFF5F5FA7).withOpacity(0.6);
+final actionColor = const Color(0xFF5F5FA7).withValues(alpha: (0.6));
 
-final divider = Divider(color: white.withOpacity(0.3), height: 1);
+final divider = Divider(color: white.withValues(alpha: (0.3)), height: 1);
